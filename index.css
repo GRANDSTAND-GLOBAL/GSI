@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.flex-container {
+    flex: auto;
+    display: flex;
+    height:500px;
+    width: 600px;
+    background-color: white;
+}
+.host {
+    flex: auto;
+    display: flex;
+    height: 360px;
+    width: 480px;
+    background-color: white;
+    position: relative;
+}
+.att {
+    flex: auto;
+    display: flex;
+    height: 360px;
+    width: 480px;
+    background-color: white;
+    position: relative;
+}
+.ctrl-att {
+    flex: auto;
+    display : flex;
+    position: relative;
+    justify-content: space-between;
+    justify-items: center;
+    height: 40px;
+    width: 100px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.ctrl-host {
+    flex: auto;
+    display : flex;
+    position: relative;
+    justify-content: space-between;
+    justify-items: center;
+    height: 40px;
+    width: 100px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.icons {
+    display: none;
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+#host-hdr{
+    width: 110px;
+    color: white;
+    font-size:small;    
+    background-color: grey;
+    padding-left: 20px;
+    display: none;
+}
+#btn-join {
+    background-color: green;
+    color: white;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    display: none;
+    }
+#btn-start {
+        background-color: green;
+        color: white;
+        width: 60px;
+        height: 30px;
+        border-radius: 30px;
+        display: none;
+        }
+#btn-end {
+    background-color: red;
+    color: white;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    display: none;
+    }
+#btn-leave {
+    background-color: red;
+    color: white;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    display: none;
+    }
