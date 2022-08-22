@@ -2,7 +2,7 @@
   "name": "grandstand",
   "version": "1.0.0-dev",
   "description": "GRANDSTAND Quick Start for JavaScript",
-  "main": "server.js",
+  "main": "./server.js",
   "scripts": {
     "build": "browserify index.js > bundle.js",
     "start": "npm run build && node server"
