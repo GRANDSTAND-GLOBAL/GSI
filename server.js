@@ -34,7 +34,7 @@ app.get('/', (req, res, next) => {
     userName = eventID;
     token = getAccessToken(userName);
 
-    app.get("/usr", async (req, res, next) => {
+    app.get('/usr', async (req, res, next) => {
       res.send ( { 
         eventID: eventID,
         displayName: displayName,
