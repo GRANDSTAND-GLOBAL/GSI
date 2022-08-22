@@ -9,6 +9,8 @@ const port = process.env.PORT || 3000;
 var path = require('path');
 const twilio = require("twilio");
 const { create } = require("domain");
+var distDir = __dirname + "/dist/";
+var distUsr = __dirname + "/usr/";
 var displayName;
 var eventID;
 var identity;
@@ -26,7 +28,7 @@ const twilioClient = require("twilio")(
   { accountSid: process.env.TWILIO_ACCOUNT_SID }
 );
 
-app.get('/', (req, res, next) => {
+app.get(distDir, (req, res, next) => {
     displayName = req.query.displayName;
     eventID = req.query.eventID;
     identity = req.query.identity;
@@ -34,7 +36,7 @@ app.get('/', (req, res, next) => {
     userName = eventID;
     token = getAccessToken(userName);
 
-    app.get('/usr', async (req, res, next) => {
+    app.get(distUsr, async (req, res, next) => {
       res.send ( { 
         eventID: eventID,
         displayName: displayName,
@@ -61,8 +63,8 @@ app.get('/', (req, res, next) => {
       next();
     })
 
-      app.use(express.static(__dirname + '/'));
-      app.get('/', function(req, res){
+      app.use(express.static(distDir));
+      app.get(distDir, function(req, res){
         res.sendFile('index.html', {root: path.join(__dirname, '/')})
     })
   
