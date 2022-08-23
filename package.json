@@ -5,7 +5,7 @@
   "main": "./server.js",
   "scripts": {
     "build": "browserify index.js > bundle.js",
-    "start": "npm run build && node server"
+    "start": "npm run build && node server.js"
   },
   "action": {
     "default-popup": "index.html",
