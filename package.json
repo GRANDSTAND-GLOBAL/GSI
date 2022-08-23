@@ -21,9 +21,5 @@
     "twilio": "^3.80.1",
     "twilio-video": "^2.18.0",
     "uuid": "^8.3.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.19",
-    "npm-run-all": "^4.0.2"
   }
 }
