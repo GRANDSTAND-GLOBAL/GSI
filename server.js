@@ -7,9 +7,6 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
 var path = require('path');
-const twilio = require("twilio");
-const { create } = require("domain");
-var distDir = __dirname + "/dist/";
 var displayName;
 var eventID;
 var identity;
@@ -61,11 +58,10 @@ app.get('/', (req, res, next) => {
       }
       next();
     })
-
+    app.get('/', function(req, res){
+      res.sendFile('index.html', {root: path.join(__dirname, '/')})
+  })
       app.use(express.static(__dirname + '/'));
-      app.get('/', function(req, res){
-        res.sendFile('index.html', {root: path.join(__dirname, '/')})
-    })
   
     const getAccessToken = (roomName) => {
     // create an access token

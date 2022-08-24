@@ -1,49 +1,56 @@
-body {
+html, body {
+    position: fixed;
+    top: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.flex-container {
-    flex: auto;
-    display: flex;
-    height:500px;
-    width: 600px;
-    background-color: white;
-}
 .host {
-    flex: auto;
-    display: flex;
-    height: 360px;
-    width: 480px;
-    background-color: white;
-    position: relative;
+    display: block;
+    height: 330px;
+    width: 440px;
+    position: absolute;
+    top: 0px;
 }
-.att {
-    flex: auto;
-    display: flex;
-    height: 360px;
-    width: 480px;
-    background-color: white;
+.video-host {
+    display: block;
+    height: 320px;
+    width: 440px;
     position: relative;
-}
-.ctrl-att {
-    flex: auto;
-    display : flex;
-    position: relative;
-    justify-content: space-between;
-    justify-items: center;
-    height: 40px;
-    width: 100px;
-    padding-left: 20px;
-    padding-top: 10px;
+    margin: auto;
 }
 .ctrl-host {
-    flex: auto;
     display : flex;
-    position: relative;
+    flex: flex;
+    position: absolute;
+    top: 420px;
+    left: 160px;
     justify-content: space-between;
-    justify-items: center;
+    width: 140px;
+}
+.att {
+    display: block;
+    width: 480px;
+    height: 360px;
+    position: absolute;
+    top: 0px;
+}
+.video-att {
+    display: block;
+    height: 320px;
+    width: 480px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}
+.ctrl-att {
+    display : flex;
+    flex: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 380px;
+    left: 40px;
     height: 40px;
-    width: 100px;
-    padding-left: 20px;
+    width: 140px;
+    padding-left: 180px;
     padding-top: 10px;
 }
 .icons {
@@ -52,16 +59,8 @@ body {
     width: 50px;
     position: relative;
 }
-#host-hdr{
-    width: 110px;
-    color: white;
-    font-size:small;    
-    background-color: grey;
-    padding-left: 20px;
-    display: none;
-}
 #btn-join {
-    background-color: green;
+    background-color: blue;
     color: white;
     width: 60px;
     height: 30px;

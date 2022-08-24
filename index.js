@@ -18,6 +18,8 @@
     const leaveButton = document.getElementById("btn-leave");
     const att = document.querySelector(".att");
     const host = document.querySelector(".host");
+    const videoAtt = document.querySelector(".video-att");
+    const videoHost = document.querySelector(".video-host");
     const icons = document.querySelector(".icons");
 
     var displayName, eventID, identity, userType, token, jsonData, room;
@@ -66,7 +68,6 @@
         localStorage.setItem('apiKey', apiKey)
       })
     }
-
     const startRoom = async (event) => {
 //    preview screen
         createLocalVideoTrack({
@@ -75,12 +76,12 @@
             width: 480,
             height: 360
           }).then(videoTrack => {
-              host.appendChild(videoTrack.attach());
+              videoHost.appendChild(videoTrack.attach());
             });  return videoTrack;
         }
 
     startButton.onclick = async () => {
-        startButton.style.display = "none"; 
+        startButton.style.display = "none";
         startRoom();
         connect(token, { 
             audio: true,
@@ -99,8 +100,6 @@
       }
     joinButton.onclick = async () => {
         joinButton.style.display = "none";
-        att.style.display = "block";
-//        host.style.display = "none";
         room = await connect(token, { 
             audio: false,
             name: eventID,
@@ -116,10 +115,10 @@
               room.participants.forEach(participant => {
                   participant.tracks.forEach(publication => {
                     if (publication.isSubscribed) {
-                          att.appendChild(publication.track.attach());
+                          videoAtt.appendChild(publication.track.attach());
                         } else {
                           publication.on('subscribed', track => {
-                            att.appendChild(track.attach());
+                            videoAtt.appendChild(track.attach());
                             })
                         }
                     })
@@ -131,12 +130,15 @@
 
     endButton.onclick = () => {
       host.style.display = "none";
+      att.style.display = "none";
       icons.style.display = "block";
       }
 
     leaveButton.onclick = () => {
       host.style.display = "none";
       att.style.display = "none";
+      leaveButton.style.display = "none";
+      videoAtt.style.display = "none";
       icons.style.display = "block";
       }
                 

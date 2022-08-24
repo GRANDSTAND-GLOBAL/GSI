@@ -8,24 +8,22 @@
     <link rel="stylesheet" href="index.css">
 </head>
   <body>
-
-    <div class="flex-container"> 
-        <div class="host">
-          <div class="ctrl-host">
-              <button id="btn-start">Start</button>
-              <button id="btn-end">End</button> 
-          </div>   
-        </div>
-
-        <div class="att">
-          <div class="ctrl-att">
+    <img class="icons" src="./favicon.ico">
+    <div class="host"> 
+        <div class="video-host"></div>
+        <div class="ctrl-host">
+            <button id="btn-start">Start</button>
+            <button id="btn-end">End</button> 
+        </div>  
+    </div>
+    <div class="att"></div>
+        <div class="video-att"></div>
+        <div class="ctrl-att">
             <button id="btn-join">Join</button>
             <button id="btn-leave">leave</button>
-          </div> 
-        </div>
-
-        <img class="icons" src="./favicon.ico">
+        </div> 
     </div> 
+  </body>  
 
   <script src="//media.twiliocdn.com/sdk/js/video/releases/2.3.0/twilio-video.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
