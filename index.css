@@ -22,8 +22,8 @@ html, body {
     flex: flex;
     justify-content: space-between;
     height: 40px;
-    width:120px;
-    padding-left: 160px;
+    width:140px;
+    padding-left: 120px;
     padding-top: 20px;
 }
 .att {
