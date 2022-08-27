@@ -1,53 +1,50 @@
 html, body {
     position: fixed;
-    top: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
 .host {
-    display: block;
-    height: 330px;
-    width: 440px;
-    position: absolute;
-    top: 0px;
+    display: flex;
+    flex: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    height: 380px;
+    width: 480px;
 }
 .video-host {
-    display: block;
+    display: flex;
     height: 320px;
-    width: 440px;
+    width: 480px;
     position: relative;
     margin: auto;
 }
 .ctrl-host {
     display : flex;
     flex: flex;
-    position: absolute;
-    top: 420px;
-    left: 160px;
     justify-content: space-between;
-    width: 140px;
+    height: 40px;
+    width:140px;
+    padding-left: 180px;
+    padding-top: 20px;
 }
 .att {
-    display: block;
+    display: none;
+    flex: flex;
+    align-content: flex-start;
+    flex-direction: column;
     width: 480px;
     height: 360px;
-    position: absolute;
-    top: 0px;
 }
 .video-att {
-    display: block;
+    display: flex;
     height: 320px;
     width: 480px;
-    position: absolute;
-    top: 0px;
-    left: 20px;
+    position: relative;
+    margin: auto;
 }
 .ctrl-att {
     display : flex;
     flex: flex;
     justify-content: space-between;
-    position: fixed;
-    top: 380px;
-    left: 40px;
     height: 40px;
     width: 140px;
     padding-left: 180px;

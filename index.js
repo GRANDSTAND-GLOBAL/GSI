@@ -20,6 +20,8 @@
     const host = document.querySelector(".host");
     const videoAtt = document.querySelector(".video-att");
     const videoHost = document.querySelector(".video-host");
+    const ctrlHost = document.querySelector(".ctrl-host");
+    const ctrlAtt = document.querySelector(".ctrl-att");
     const icons = document.querySelector(".icons");
 
     var displayName, eventID, identity, userType, token, jsonData, room;
@@ -36,6 +38,7 @@
           accountSid = localStorage.getItem("accountSid");
           apiKey = localStorage.getItem("apiKey");
           userName = eventID;
+          console.log('host is', userType)
           if ( userType == "Host" ) {
 //            host.style.display="flex";
             startButton.style.display = "block"; 
@@ -73,21 +76,22 @@
         createLocalVideoTrack({
             audio : true,
             video : 640,
-            width: 480,
-            height: 360
+            width: 384,
+            height: 288
           }).then(videoTrack => {
               videoHost.appendChild(videoTrack.attach());
             });  return videoTrack;
         }
 
     startButton.onclick = async () => {
+      console.log('start clicked')
         startButton.style.display = "none";
         startRoom();
         connect(token, { 
             audio: true,
             uniqueName: eventID,
-            video: { width: 480,
-                    height: 360 }
+            video: { width: 384,
+                    height: 288 }
           })
           .then(room => {
               console.log(`Successfully joined a Room: ${room.name}`);
@@ -103,8 +107,8 @@
         room = await connect(token, { 
             audio: false,
             name: eventID,
-            video: { width: 420,
-                    height: 360 },
+            video: { width: 384,
+                    height: 288 },
             tracks: videoTrack
           }).then(room => {
               console.log(`======= >>>>>> =======Successfully joined a Room: ${room.name}`);
