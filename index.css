@@ -16,6 +16,7 @@ html, body {
     width: 480px;
     position: relative;
     margin: auto;
+    background-color: azure;
 }
 .ctrl-host {
     display : flex;
@@ -40,6 +41,7 @@ html, body {
     width: 400px;
     position: relative;
     margin: auto;
+    background-color: azure;
 }
 .ctrl-att {
     display : flex;
