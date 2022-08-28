@@ -31,13 +31,13 @@ html, body {
     flex: flex;
     align-content: flex-start;
     flex-direction: column;
-    width: 480px;
-    height: 360px;
+    width: 400px;
+    height: 300px;
 }
 .video-att {
     display: flex;
-    height: 320px;
-    width: 480px;
+    height: 300px;
+    width: 400px;
     position: relative;
     margin: auto;
 }
