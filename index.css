@@ -7,13 +7,13 @@ html, body {
     flex: flex;
     align-content: flex-start;
     flex-direction: column;
-    height: 480px;
-    width: 640px;
+    height: 384px;
+    width: 512px;
 }
 .video-host {
     display: flex;
-    height: 480px;
-    width: 640px;
+    height: 384px;
+    width: 512px;
     position: relative;
     margin: auto;
     top: 20px;
@@ -32,13 +32,13 @@ html, body {
     flex: flex;
     align-content: flex-start;
     flex-direction: column;
-    height: 480px;
-    width: 640px;
+    height: 384px;
+    width: 512px;
 }
 .video-att {
     display: flex;
-    height: 480px;
-    width: 640px;
+    height: 384px;
+    width: 512px;
     position: relative;
     margin: auto;
 }
