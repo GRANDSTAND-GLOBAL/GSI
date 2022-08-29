@@ -37,8 +37,8 @@ html, body {
 }
 .video-att {
     display: flex;
-    height: 300px;
-    width: 400px;
+    height: 480px;
+    width: 640px;
     position: relative;
     margin: auto;
 }
