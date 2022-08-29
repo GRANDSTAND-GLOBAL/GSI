@@ -76,8 +76,8 @@
         createLocalVideoTrack({
             audio : true,
             video : 640,
-            width: 384,
-            height: 288
+            width: 640,
+            height: 480
           }).then(videoTrack => {
               videoHost.appendChild(videoTrack.attach());
             });  return videoTrack;
@@ -90,8 +90,8 @@
         connect(token, { 
             audio: true,
             uniqueName: eventID,
-            video: { width: 384,
-                    height: 288 }
+            video: { width: 640,
+                    height: 480 }
           })
           .then(room => {
               console.log(`Successfully joined a Room: ${room.name}`);
@@ -107,8 +107,8 @@
         room = await connect(token, { 
             audio: false,
             name: eventID,
-            video: { width: 384,
-                    height: 288 },
+            video: { width: 640,
+                    height: 480 },
             tracks: videoTrack
           }).then(room => {
               console.log(`======= >>>>>> =======Successfully joined a Room: ${room.name}`);
