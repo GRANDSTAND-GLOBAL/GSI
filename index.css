@@ -32,13 +32,13 @@ html, body {
     flex: flex;
     align-content: flex-start;
     flex-direction: column;
-    height: 360px;
-    width: 480px;
+    height: 384px;
+    width: 512px;
 }
 .video-att {
     display: flex;
-    height: 360px;
-    width: 480px;
+    height: 384px;
+    width: 512px;
     position: relative;
     margin: auto;
 }
