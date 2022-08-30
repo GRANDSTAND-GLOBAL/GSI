@@ -32,13 +32,13 @@ html, body {
     flex: flex;
     align-content: flex-start;
     flex-direction: column;
-    height: 384px;
-    width: 512px;
+    height: 360px;
+    width: 480px;
 }
 .video-att {
     display: flex;
-    height: 384px;
-    width: 512px;
+    height: 360px;
+    width: 480px;
     position: relative;
     margin: auto;
 }
@@ -48,7 +48,7 @@ html, body {
     justify-content: space-between;
     height: 40px;
     width: 140px;
-    padding-left: 200px;
+    padding-left: 120px;
     padding-top: 10px;
 }
 .icons {
